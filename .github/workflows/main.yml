@@ -19,7 +19,7 @@ on:
       - 'LICENSE'
 
 env:
-  RDM_REF: 2021.7-py3.8
+  RDM_REF: 2021.7
   VERSION: 2021.7.0
   PY_LIB_VERSION: 38
   PYTHON_EMBEDDED_VERSION: 3.8.10
@@ -44,8 +44,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ env.RDM_REF }}
-          release_name: v${{ env.RDM_REF }}
+          tag_name: ${{ env.RDM_REF }}-py3.8
+          release_name: v${{ env.RDM_REF }}-py3.8
           body: |
             ${{ env.RDM_REF }}
           draft: false
